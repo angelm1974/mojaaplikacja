@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Czlowiek } from '../czlowiek';
- 
+import { MoiLudzie } from '../mock-ludzie';
 @Component({
   selector: 'app-ludzie',
   templateUrl: './ludzie.component.html',
@@ -8,17 +8,15 @@ import { Czlowiek } from '../czlowiek';
 })
 export class LudzieComponent implements OnInit {
 
-  czlowiek: Czlowiek= {
-    id: 1,
-    nazwisko:'Matronowicz',
-    imie: 'Antoni',
-    wiek: 42,
-    utworzony: new Date('2020-03-12'),
-    zdjecie: "antoni.jpg"
-  };
+  moiludzie= MoiLudzie;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+ wybranaOsoba?: Czlowiek;
+ onSelect(osoba: Czlowiek): void {
+   this.wybranaOsoba=osoba;
+ }
 }
