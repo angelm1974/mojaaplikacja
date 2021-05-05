@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "mojaaplikacja-4f408": {
+      "hosting": {
+        "mojaaplikacja": [
+          "mojaaplikacja-4f408"
+        ]
+      }
+    }
+  }
+}
